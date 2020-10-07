@@ -43,17 +43,14 @@ window.addEventListener("load", async () => {
     }
   }
 
-
-  const bannerInstall = document.querySelector('#banner-install');
-  bannerInstall.addEventListener('click' async () => {
+  const bannerInstall = document.querySelector("#banner-install");
+  bannerInstall.addEventListener("click", async () => {
     if (deferredPrompt) {
       deferredPrompt.prompt();
       const response = await deferredPrompt.userChoice;
-      if (response.outcome === 'dismissed') {
-        console.error('El usuario cancelo la instalación');
+      if (response.outcome === "dismissed") {
+        console.error("El usuario cancelo la instalación");
       }
     }
   });
-
-
 });
